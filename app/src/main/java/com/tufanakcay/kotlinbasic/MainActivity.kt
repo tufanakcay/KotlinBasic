@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         txtViewData = findViewById(R.id.txtViewData)
 
         var btnBackColor = btnGotoSettings.backgroundTintList?.defaultColor
+
         btnGotoSettings.setOnClickListener {
             var data = txtData.text.toString()
             Toast.makeText(this, data, Toast.LENGTH_LONG).show()
@@ -32,8 +33,8 @@ class MainActivity : AppCompatActivity() {
         // OnChange
         txtData.addTextChangedListener {
             txtViewData.text = it.toString()
-            if ( it.toString() == "zehra@mail.com" ) {
-                btnGotoSettings.setBackgroundColor(Color.RED)
+            if ( it.toString() == "test@gmail.com" ) {
+                btnGotoSettings.setBackgroundColor(Color.GREEN)
             }else {
                 btnGotoSettings.setBackgroundColor(btnBackColor!!)
             }
